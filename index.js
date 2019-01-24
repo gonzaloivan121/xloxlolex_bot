@@ -6,12 +6,12 @@
  */
 
 // Import Telegram Bot Stuff
-const TelegramBot = require('node-telegram-bot-api');
-const config = require('./config');
+const TelegramBot = require('node-telegram-bot-api'  );
+const config      = require('./config'               );
 
-const buffer = new Buffer(config.token, 'base64');
+const buffer = new Buffer(config.token, 'base64'     );
 const token  = buffer.toString();
-const bot = new TelegramBot(token, {polling: true});
+const bot    = new TelegramBot(token, {polling: true});
 
 // Import Songs
 const Priceless = require('./Songs/Priceless/Priceless'                );
@@ -43,8 +43,6 @@ let videos = [
   { url: "https://www.youtube.com/watch?v=V3iKxxcLv3A", nombre: "Absolute Zero"     },
   { url: "https://www.youtube.com/watch?v=0YG7osAPc1w", nombre: "Abducted"          }
 ];
-
-
 
 bot.onText(/\/echo (.+)/, (msg, match) => {
   const chatId = msg.chat.id;
