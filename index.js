@@ -6,12 +6,12 @@
  */
 
 // Import Telegram Bot Stuff
-const TelegramBot = require('node-telegram-bot-api'  );
-const config      = require('./config'               );
+const TelegramBot = require('node-telegram-bot-api'                    );
+const config      = require('./config'                                 );
 
-const buffer = new Buffer(config.token, 'base64'     );
+const buffer = new Buffer(config.token, 'base64'                       );
 const token  = buffer.toString();
-const bot    = new TelegramBot(token, {polling: true});
+const bot    = new TelegramBot(token, {polling: true}                  );
 
 // Import Songs
 const Priceless = require('./Songs/Priceless/Priceless'                );
